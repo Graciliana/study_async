@@ -3,4 +3,4 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def cadastro(request):
-  return HttpResponse('olá mundo!!!')
+  return render(request, 'cadastro.html')
