@@ -1,5 +1,3 @@
-
-from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
 from django.contrib.messages import constants
@@ -27,4 +25,9 @@ def cadastro(request):
     except:
       messages.add_message(request, constants.ERROR, 'Erro interno do servidor.')
       return redirect('/usuarios/cadastro')
-    
+
+
+def login(request):
+  if request.method == "GET":
+    return render(request, 'login.html')
+  
